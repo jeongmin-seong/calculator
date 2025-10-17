@@ -12,10 +12,10 @@ public class App {
         while (!answer.equals("exit")) {
             // 양의 정수(0 포함) 입력받기
             System.out.print("첫번째 숫자를 입력하세요:");
-            double num1 = sc.nextInt();
+            double num1 = sc.nextDouble();
 
             System.out.print("두번째 숫자를 입력하세요:");
-            double num2 = sc.nextInt();
+            double num2 = sc.nextDouble();
 
             // 사칙연산 기호 입력받기
             sc.nextLine(); // 정수형 입력 후 제거되지 않은 개행문자 제거하기
@@ -28,17 +28,17 @@ public class App {
             // 위에서 입력받은 정수 2개와 사칙연산 기호를 이용하여 연산 후 결과값 출력하기
             switch (operator) {
                 case '+':
-                    result = num2 + num2;
+                    result = num1 + num2;
                     System.out.print("결과: " + result);
                     break;
 
                 case '-':
-                    result = num2 - num2;
+                    result = num1 - num2;
                     System.out.print("결과: " + result);
                     break;
 
                 case '*':
-                    result = num2 * num2;
+                    result = num1 * num2;
                     System.out.print("결과: " + result);
                     break;
 
@@ -47,8 +47,8 @@ public class App {
                         System.out.print("나눗셈 연산에서 분모에 0이 입력될 수 없습니다.");
                         break;
                     }
-                    result = num2 / num2;
-                    System.out.print("결과" + result);
+                    result = num1 / num2;
+                    System.out.print("결과: " + result);
                     break;
                 default:
                     System.out.print("사칙연산 기호가 적절하지 않습니다.");
